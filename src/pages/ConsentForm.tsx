@@ -2,6 +2,7 @@
 import React, { useState, useRef } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import Banner from "../components/Banner";
+import footerImage from "../assets/footer.png";
 
 const ConsentForm: React.FC = () => {
   const [captchaValue, setCaptchaValue] = useState<string | null>(null);
@@ -204,59 +205,77 @@ const ConsentForm: React.FC = () => {
           <p>The following problems may occur with treatment:</p>
           <ol>
             <li>
-              Scarring: The pulsed light system can create bruising and a
-              moderate burn or blister to the skin. For an effective treatment,
-              the intensity (joules) must be just below the blistering point
-              which means that the skin will be red (erythema). There is a risk
-              of scarring in burned skin cases.
+              <span>
+                <b>Scarring:</b>
+              </span>{" "}
+              The pulsed light system can create bruising and a moderate burn or
+              blister to the skin. For an effective treatment, the intensity
+              (joules) must be just below the blistering point which means that
+              the skin will be red (erythema). There is a risk of scarring in
+              burned skin cases.
             </li>
             <li>
-              Hyperpigmentation and Hypopigmentation: These have been noted to
-              occur after treatments, especially with a darker complexion. This
-              usually resolves within weeks, but it can take as long as 3-6
-              months in some cases. There is a rare risk of permanent color
-              change. If you have dark skin, a skin lightening cream may be
-              advised as a treatment to reduce the melanin in your skin before
-              and after treatment and must be regulated by a physician. Avoiding
-              sun exposure before and after the treatment is crucial to reduce
-              the risk of color change and burns.
+              <span>
+                <b>Hyperpigmentation and Hypopigmentation:</b>
+              </span>{" "}
+              These have been noted to occur after treatments, especially with a
+              darker complexion. This usually resolves within weeks, but it can
+              take as long as 3-6 months in some cases. There is a rare risk of
+              permanent color change. If you have dark skin, a skin lightening
+              cream may be advised as a treatment to reduce the melanin in your
+              skin before and after treatment and must be regulated by a
+              physician. Avoiding sun exposure before and after the treatment is
+              crucial to reduce the risk of color change and burns.
             </li>
             <li>
-              Infection: Although infection following pulsed light treatment is
-              unusual, bacterial, fungal, and viral infections can occur. Herpes
-              simplex virus infections around the mouth can occur following a
-              treatment. This applies to individuals with a past history of
-              Herpes simplex virus infections in the area. Should any type of
-              skin infection occur, additional treatment including antibiotics
-              will be necessary. If you have a history of Herpes simplex virus
-              in the treated area, we recommend preventive therapy.
+              <span>
+                <b>Infection:</b>
+              </span>{" "}
+              Although infection following pulsed light treatment is unusual,
+              bacterial, fungal, and viral infections can occur. Herpes simplex
+              virus infections around the mouth can occur following a treatment.
+              This applies to individuals with a past history of Herpes simplex
+              virus infections in the area. Should any type of skin infection
+              occur, additional treatment including antibiotics will be
+              necessary. If you have a history of Herpes simplex virus in the
+              treated area, we recommend preventive therapy.
             </li>
             <li>
-              Bleeding: Pinpoint bleeding is rare but can occur following
-              pigmented and vascular lesion treatment procedures. Should
-              bleeding occur, additional treatment might be necessary.
+              <span>
+                <b>Bleeding:</b>
+              </span>{" "}
+              Pinpoint bleeding is rare but can occur following pigmented and
+              vascular lesion treatment procedures. Should bleeding occur,
+              additional treatment might be necessary.
             </li>
             <li>
-              Skin tissue pathology: Energy directed at skin lesions may
-              potentially vaporize the lesion. Laboratory examination of the
-              tissue specimen may not be possible. Only clearly benign pigmented
-              lesions can be treated. A physicians approval may be requested in
-              order to proceed with the treatment of certain pigmented and
-              vascular lesions.
+              <span>
+                <b>Skin tissue pathology:</b>
+              </span>{" "}
+              Energy directed at skin lesions may potentially vaporize the
+              lesion. Laboratory examination of the tissue specimen may not be
+              possible. Only clearly benign pigmented lesions can be treated. A
+              physicians approval may be requested in order to proceed with the
+              treatment of certain pigmented and vascular lesions.
             </li>
             <li>
-              Allergic reactions: In rare cases, local allergies to tape,
-              preservatives used in cosmetics or topical preparations have been
-              reported. Systemic reactions (which are more serious) may result
-              from prescription medicines. Allergic reactions may require
-              additional treatment.
+              <span>
+                <b>Allergic reactions:</b>
+              </span>{" "}
+              In rare cases, local allergies to tape, preservatives used in
+              cosmetics or topical preparations have been reported. Systemic
+              reactions (which are more serious) may result from prescription
+              medicines. Allergic reactions may require additional treatment.
             </li>
             <li>
-              Sunscreen: Wear sunscreen of SPF 50 or higher before and after
-              treatment to protect your skin. We highly recommend you use
-              sunscreen at all times. Compliance with the after-care guidelines
-              is crucial for healing, prevention of scaring, hyper-pigmentation,
-              and hypopigmentation.
+              <span>
+                <b>Sunscreen:</b>
+              </span>{" "}
+              Wear sunscreen of SPF 50 or higher before and after treatment to
+              protect your skin. We highly recommend you use sunscreen at all
+              times. Compliance with the after-care guidelines is crucial for
+              healing, prevention of scaring, hyper-pigmentation, and
+              hypopigmentation.
             </li>
             <li>
               I understand that exposure of my eyes to light could harm my
@@ -363,7 +382,7 @@ const ConsentForm: React.FC = () => {
         <div style={{ textAlign: "left", marginTop: "20px" }}>
           <ReCAPTCHA
             ref={recaptchaRef}
-            sitekey="YOUR_SITE_KEY_HERE" // Replace with your Site Key
+            sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" // Replace with your Site Key
             onChange={handleCaptchaChange}
           />
           <button
@@ -381,6 +400,16 @@ const ConsentForm: React.FC = () => {
             Submit
           </button>
         </div>
+
+        <img
+          src={footerImage}
+          alt="Sharplight Image"
+          style={{
+            width: "100%",
+            height: "auto",
+            display: "block",
+          }}
+        />
       </div>
     </div>
   );
