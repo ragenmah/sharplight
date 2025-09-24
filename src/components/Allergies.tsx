@@ -7,7 +7,6 @@ const Allergies: React.FC = () => {
       <div
         style={{
           color: "#77276d",
-
           fontWeight: "bold",
           textAlign: "center",
           margin: "20px 0 10px",
@@ -24,7 +23,6 @@ const Allergies: React.FC = () => {
         type="text"
         style={{
           width: "100%",
-          border: "none",
           marginBottom: "15px",
         }}
       />

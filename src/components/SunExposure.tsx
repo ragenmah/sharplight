@@ -12,7 +12,7 @@ const SunExposure: React.FC = () => {
           color: "#77276d",
           fontWeight: "bold",
           textAlign: "center",
-          margin: "20px 0 0px",
+          margin: "20px 0 10px",
           borderTop: "2px dotted #ccc",
           paddingTop: "5px",
           borderBottom: "2px dotted #ccc",
